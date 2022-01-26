@@ -8,6 +8,10 @@ public class Main
 
         Animal misty = new Animal("Misty");
         Animal lucy = new Animal("Lucy");
+        Cat ginger = new Cat("Ginger");
+       for (int i = 0; i < 10 ; i++) {
+           ginger.kill();
+       }
 
         lucy = misty;
         misty.setName("Tara");
