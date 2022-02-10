@@ -17,20 +17,28 @@ public class BugZap extends PApplet
 	public void setup() 
     {
         colorMode(RGB);
-        playerX = (100);
-        playerY = (250);
-        playerWidth = (100);
+
+		smooth();
+
+        playerX = width / 2;
+        playerY = height - 50;
+        playerWidth = 50;
 	}
 	
     void drawPlayer(float x, float y, float w){
-        strokeWeight(5);
-        stroke(0, 0, 0);
-        line(x, y, w, 250);
+        
+        stroke(255);
+		noFill();
+		rectMode(CENTER);
+		rect(x, y, w, 20);
+        line(x, y - 10, x, y - 20);
 
     }
 
 	public void draw()
 	{	
+		background(0);
+		strokeWeight(2);
         drawPlayer(playerX, playerY, playerWidth);
 	}
 
